@@ -5,6 +5,7 @@ double gold = 300;
 double backpackWeight = 30; 
 bool map = true; 
 
+Console.WriteLine("##### TASK 1 #####");
 Console.WriteLine("Hero Equipment");
 Console.WriteLine($"Name (string): {name}");
 Console.WriteLine($"Symbol na mapie (char): {symbol}");
