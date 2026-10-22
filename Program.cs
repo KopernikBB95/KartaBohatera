@@ -1,17 +1,23 @@
-﻿Console.WriteLine("##### TASK 1 WEEK 3 #####");
+﻿Console.WriteLine("##### TASK 2 WEEK 3 #####");
 Console.WriteLine("");
-Console.WriteLine("Podaj liczbę: ");
-int liczba = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Podaj kierunek w którym zmierzasz (\"północ\", \"południe\", \"wschód\", \"zachód\"): ");
+string kierunek = Console.ReadLine()!;
 
-if (liczba % 2 == 0)
+switch (kierunek)
 {
-    Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine("Liczba jest parzysta");
-    Console.ResetColor();
-}
-else
-{
-    Console.BackgroundColor = ConsoleColor.Red;
-    Console.WriteLine("Liczba jest nieparzysta");
-    Console.ResetColor();
+    case "północ":
+        Console.WriteLine("Wyruszasz w stronę gór.");
+        break;
+    case "południe":
+        Console.WriteLine("Wyruszasz w stronę pustyni.");
+        break;
+     case "wschód":
+        Console.WriteLine("Wyruszasz w stronę lasu.");
+        break;
+     case "zachód":
+        Console.WriteLine("Wyruszasz w stronę morza.");
+        break;
+    default:
+        Console.WriteLine("Nieznany kierunek.");
+        break;
 }
