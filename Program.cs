@@ -10,24 +10,21 @@ bool key = bool.Parse(Console.ReadLine()!);
 Console.WriteLine("Czy bohater zna haslo? (wpisz \"True\") lub \"False\" ");
 bool password = bool.Parse(Console.ReadLine()!);
 
-if (healthPoints > 0)
-{
-    if (key || password == true)
-    {
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine("Możesz wejść");
-        Console.ResetColor();
-    }
-    else
-    {
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("Nie możesz wejść, musisz posiadać mape lub hasło");
-        Console.ResetColor();
-    }
-}
-else if (healthPoints <= 0)
+if (healthPoints <= 0)
 {
     Console.BackgroundColor = ConsoleColor.Red;
-    Console.WriteLine("Nie możesz wejść bo nie żyjesz :c");
+    Console.WriteLine("Nie możesz wejść, nie żyjesz");
+    Console.ResetColor();
+}
+else if (healthPoints > 0 && (key || password == true) )
+{
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.WriteLine("Możesz wejść.");
+    Console.ResetColor();
+}
+else
+{
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("Nie możesz wejść. Potrzebujesz klucza bądź hasła.");
     Console.ResetColor();
 }
