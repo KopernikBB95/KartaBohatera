@@ -1,23 +1,28 @@
-﻿Console.WriteLine("##### TASK 2 WEEK 3 #####");
+﻿Console.WriteLine("##### TASK 3 WEEK 3 #####");
 Console.WriteLine("");
-Console.WriteLine("Podaj kierunek w którym zmierzasz (\"północ\", \"południe\", \"wschód\", \"zachód\"): ");
-string kierunek = Console.ReadLine()!;
+Console.WriteLine("Podaj swój wiek: ");
+int wiek = int.Parse(Console.ReadLine()!);
 
-switch (kierunek)
+if (wiek >= 0)
 {
-    case "północ":
-        Console.WriteLine("Wyruszasz w stronę gór.");
-        break;
-    case "południe":
-        Console.WriteLine("Wyruszasz w stronę pustyni.");
-        break;
-     case "wschód":
-        Console.WriteLine("Wyruszasz w stronę lasu.");
-        break;
-     case "zachód":
-        Console.WriteLine("Wyruszasz w stronę morza.");
-        break;
-    default:
-        Console.WriteLine("Nieznany kierunek.");
-        break;
+    if (wiek <= 12)
+    {
+        Console.WriteLine("Dziecko xD");
+    }
+    else if (wiek <= 17)
+    {
+        Console.WriteLine("Nastolatek");
+    }
+    else if (wiek <= 64)
+    {
+        Console.WriteLine("Osoba dorosła");
+    }
+    else if (wiek >= 65)
+    {
+        Console.WriteLine("Senior");
+    }
+}
+else
+{
+    Console.WriteLine("Wiek nie może być ujemny!");
 }
