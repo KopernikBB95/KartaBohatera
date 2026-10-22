@@ -1,28 +1,27 @@
-﻿Console.WriteLine("##### TASK 3 WEEK 3 #####");
+﻿Console.WriteLine("##### TASK 4 WEEK 3 #####");
 Console.WriteLine("");
-Console.WriteLine("Podaj swój wiek: ");
-int wiek = int.Parse(Console.ReadLine()!);
 
-if (wiek >= 0)
+Console.WriteLine("Podaj ilość punktów życia jaką ma bohater: ");
+int healthPoints = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine("Czy bohater posiada klucz? (wpisz \"True\" lub \"False\")");
+bool key = bool.Parse(Console.ReadLine()!);
+
+Console.WriteLine("Czy bohater zna haslo? (wpisz \"True\") lub \"False\" ");
+bool password = bool.Parse(Console.ReadLine()!);
+
+if (healthPoints > 0)
 {
-    if (wiek <= 12)
+    if (key || password == true)
     {
-        Console.WriteLine("Dziecko xD");
+        Console.WriteLine("Możesz wejść");
     }
-    else if (wiek <= 17)
+    else
     {
-        Console.WriteLine("Nastolatek");
-    }
-    else if (wiek <= 64)
-    {
-        Console.WriteLine("Osoba dorosła");
-    }
-    else if (wiek >= 65)
-    {
-        Console.WriteLine("Senior");
+        Console.WriteLine("Nie możesz wejść, musisz posiadać mape lub hasło");
     }
 }
-else
+else if (healthPoints <= 0)
 {
-    Console.WriteLine("Wiek nie może być ujemny!");
+    Console.WriteLine("Nie możesz wejść bo nie żyjesz :c");
 }
