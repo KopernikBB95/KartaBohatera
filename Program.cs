@@ -14,14 +14,20 @@ if (healthPoints > 0)
 {
     if (key || password == true)
     {
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("Możesz wejść");
+        Console.ResetColor();
     }
     else
     {
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("Nie możesz wejść, musisz posiadać mape lub hasło");
+        Console.ResetColor();
     }
 }
 else if (healthPoints <= 0)
 {
+    Console.BackgroundColor = ConsoleColor.Red;
     Console.WriteLine("Nie możesz wejść bo nie żyjesz :c");
+    Console.ResetColor();
 }
